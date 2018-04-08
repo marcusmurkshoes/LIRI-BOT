@@ -35,13 +35,13 @@ client.get('statuses/user_timeline', params, function(error, tweets, response) {
 //OMDB Movie Logic-----------------------------------------------------------------
 
 var getMovie = function(movieName) {
-
+//Requesting the information from the API
 request('http://www.omdbapi.com/?t=' + movieName + '&apikey=a47e75cd', function (error, response, body) {
   console.log('error:', error); // Print the error if one occurred
   console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
 
   var jsonData = JSON.parse(body);
-
+//Parsing the information so its more readable
   console.log('Title: ' + jsonData.Title);
   console.log('Year: ' + jsonData.Year);
   console.log('Ratings: ' + jsonData.Ratings);
@@ -56,7 +56,7 @@ request('http://www.omdbapi.com/?t=' + movieName + '&apikey=a47e75cd', function 
 // Do What It Says Function----------------------------------------------------------
 
 var doWhatItSays = function() {
-
+  //Saying If the .txt file has one or two parameters in the array and using the choose function to find the cases in the switch case
   fs.readFile('random.txt', 'utf-8', function(err, data) {
     if (err) throw err;
 
@@ -124,7 +124,7 @@ spotify.search({ type: 'track', query: songName }, function(err, data) {
   if (err) {
     return console.log('Error occurred: ' + err);
   }
-
+// for loop that loops through the information on the artist and 
 var songs = data.tracks.items;
   for(var i = 0; i < songs.length; i++) {
     console.log[i];

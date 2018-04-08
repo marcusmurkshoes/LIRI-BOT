@@ -1,1 +1,2 @@
 # LIRI-BOT
+ LIRI is a command line node app that takes in parameters from spotify, twitter, and OMDB API for movies. Users are able to get song information, tweets from a twitter account, and are able to look up the movies they want!
